@@ -1,0 +1,30 @@
+# Project Blicky — Development Handoff
+
+Build **Blicky**, a cross-platform Windows and Linux desktop mascot inspired by Microsoft's Clippy.
+
+## Concept
+Blicky is an intentionally unhelpful, sarcastic desktop companion. He's an anthropomorphic cartoon pistol with a sideways fitted cap, gold chain, expressive eyes, white gloves, and oversized sneakers. His personality is comedic, irreverent, and constantly questions what the user is doing.
+
+## Technical direction
+- Language: Rust
+- Starting codebase: https://github.com/quinnjr/clippy-desktop
+- Prefer reusing the existing windowing, animation, rendering, and dialogue systems rather than rewriting the application.
+- Target Windows 10/11 and Linux, initially Fedora and Ubuntu.
+- Preserve applicable open-source licenses.
+- Replace Microsoft Clippy artwork with original Blicky assets.
+
+## MVP functionality
+1. Transparent, frameless, always-on-top animated desktop character.
+2. Draggable character with multiple animations.
+3. Retro-style speech bubbles containing randomized comedic commentary.
+4. Configurable interruption frequency and system tray controls.
+5. Optional desktop-event awareness, subject to OS permissions.
+6. No cloud services or AI required for the initial version.
+7. Architecture allowing optional Ollama or LM Studio integration later.
+
+## Development approach
+First inspect the upstream Clippy repository, verify its license, dependencies, and platform compatibility. Identify reusable components and technical limitations.
+
+Then produce a phased implementation plan and begin implementing the MVP.
+
+Do not assume existing features work without inspecting the source. Prioritize a working, lightweight desktop application over unnecessary complexity.
